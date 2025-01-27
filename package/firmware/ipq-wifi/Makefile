@@ -28,6 +28,7 @@ endef
 # <https://wireless.wiki.kernel.org/en/users/drivers/ath10k/boardfiles>
 
 ALLWIFIBOARDS:= \
+	brax_fa556
 	arcadyan_aw1000 \
 	buffalo_wxr-5950ax12 \
 	compex_wpq873 \
