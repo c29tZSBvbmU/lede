@@ -14,6 +14,7 @@ platform_do_upgrade() {
 		CI_UBIPART="rootfs"
 		nand_do_upgrade "$1"
 		;;
+  	megatower,brax-fa556|\
 	arcadyan,aw1000|\
 	cmcc,rm2-6|\
 	compex,wpq873|\
