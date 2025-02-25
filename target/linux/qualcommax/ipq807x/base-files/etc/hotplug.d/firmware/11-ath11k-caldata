@@ -30,6 +30,7 @@ case "$FIRMWARE" in
 	zte,mf269|\
 	zyxel,nbg7815)
 		caldata_extract "0:art" 0x1000 0x20000
+		ath11k_remove_regdomain
 		;;
 	prpl,haze)
 		caldata_extract_mmc "0:ART" 0x1000 0x20000
