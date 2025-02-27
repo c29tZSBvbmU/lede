@@ -10,10 +10,6 @@ megatower,brax-fa556)
 	ucidef_set_led_wlan "wlan5g" "WIFI 5GHz" "green:wlan5g" "phy0radio"
 	ucidef_set_led_wlan "wlan2g" "WIFI 2.4GHz" "green:wlan2g" "phy1radio"
 	ucidef_set_led_netdev "wan" "WAN" "green:test1" "wan"
-	ucidef_set_led_netdev "wan" "WAN" "green:test2" "wan"
-	ucidef_set_led_netdev "wan" "WAN" "green:test3" "wan"
-	ucidef_set_led_netdev "wan" "WAN" "green:test4" "wan"
-	ucidef_set_led_netdev "wan" "WAN" "green:test5" "wan"
 	;;
 arcadyan,aw1000)
 	ucidef_set_led_netdev "5g" "5G" "green:5g" "wwan0"
