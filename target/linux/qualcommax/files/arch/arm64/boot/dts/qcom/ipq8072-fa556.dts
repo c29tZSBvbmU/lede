@@ -84,16 +84,6 @@
 	leds {
 		compatible = "gpio-leds";
 
-		net {
-			label = "green:net";
-			gpios = <&tlmm 22 GPIO_ACTIVE_HIGH>;
-		};
-
-		modem {
-			label = "green:modem";
-			gpios = <&tlmm 30 GPIO_ACTIVE_HIGH>;
-		};
-
 		wlan2g {
 			label = "green:wlan2g";
 			gpios = <&tlmm 42 GPIO_ACTIVE_HIGH>;
