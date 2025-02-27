@@ -97,23 +97,7 @@
 		};
 		test1 {
 			label = "green:test1";
-			gpios = <&tlmm 56 GPIO_ACTIVE_LOW>;
-		};
-		test2 {
-			label = "green:test2";
 			gpios = <&tlmm 33 GPIO_ACTIVE_LOW>;
-		};
-		test3 {
-			label = "green:test3";
-			gpios = <&tlmm 34 GPIO_ACTIVE_LOW>;
-		};
-		test4 {
-			label = "green:test4";
-			gpios = <&tlmm 73 GPIO_ACTIVE_LOW>;
-		};
-		test5 {
-			label = "green:test5";
-			gpios = <&tlmm 74 GPIO_ACTIVE_LOW>;
 		};
 	};
 };
