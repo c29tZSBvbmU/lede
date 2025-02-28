@@ -95,9 +95,30 @@
 			gpios = <&tlmm 43 GPIO_ACTIVE_LOW>;
 			linux,default-trigger = "phy0radio";
 		};
-		test1 {
-			label = "green:test1";
-			gpios = <&tlmm 33 GPIO_ACTIVE_LOW>;
+		led_nr_g {
+			label = "green:nr";
+			gpios = <&tlmm 0 GPIO_ACTIVE_LOW>;
+		};
+
+		led_nr_r {
+			label = "red:nr";
+			gpios = <&tlmm 9 GPIO_ACTIVE_LOW>;
+		};
+
+
+		led_lte_g {
+			label = "green:lte";
+			gpios = <&tlmm 29 GPIO_ACTIVE_LOW>;
+		};
+
+		led_lte_r {
+			label = "red:lte";
+			gpios = <&tlmm 30 GPIO_ACTIVE_LOW>;
+		};
+
+		led_voice {
+			label = "green:voice";
+			gpios = <&tlmm 56 GPIO_ACTIVE_LOW>;
 		};
 	};
 };
