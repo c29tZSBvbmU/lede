@@ -14,10 +14,6 @@
 	compatible = "megatower,brax-fa556", "qcom,ipq8074";
 
 	aliases {
-		//led-boot = &led_power;
-		//led-failsafe = &led_power;
-		//led-running = &led_power;
-		//led-upgrade = &led_power;
 		serial0 = &blsp1_uart5;
 		/*
 		 * Aliases as required by u-boot
@@ -45,11 +41,11 @@
 			gpios = <&tlmm 54 GPIO_ACTIVE_HIGH>;
 		};
 
-		lte-power {
-			gpio-export,name = "lte_power";
-			gpio-export,output = <1>;
-			gpios = <&tlmm 30 GPIO_ACTIVE_HIGH>;
-		};
+		//lte-power {
+		//	gpio-export,name = "lte_power";
+		//	gpio-export,output = <1>;
+		//	gpios = <&tlmm 30 GPIO_ACTIVE_HIGH>;
+		//};
 
 		lte-reset {
 			gpio-export,name = "lte_reset";
