@@ -53,11 +53,11 @@
 			gpios = <&tlmm 63 GPIO_ACTIVE_HIGH>;
 		};
 
-		usb-vbus {
-			gpio-export,name = "usb_vbus";
-			gpio-export,output = <0>;
-			gpios = <&tlmm 9 GPIO_ACTIVE_LOW>;
-		};
+		//usb-vbus {
+		//	gpio-export,name = "usb_vbus";
+		//	gpio-export,output = <0>;
+		//	gpios = <&tlmm 9 GPIO_ACTIVE_LOW>;
+		//};
 	};
 
 	keys {
