@@ -286,7 +286,7 @@
 			partition@a0000 {
 				reg = <0xa0000 0x180000>;
 				label = "0:QSEE";
-.				read-only;
+				read-only;
 			};
 		};
 	};
