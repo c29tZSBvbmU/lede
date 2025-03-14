@@ -76,7 +76,7 @@ git pull
 ./scripts/feeds install -a
 make defconfig
 make download -j8
-make V=s -j$(nproc)
+make V=e -j$(nproc)
 ```
 
 如果需要重新配置：
