@@ -176,116 +176,116 @@
 			#address-cells = <1>;
 			#size-cells = <1>;
 
-			partition@220000 {
-				reg = <0x220000 0x180000>;
-				label = "0:QSEE_1";
-				read-only;
-			};
-
-			partition@420000 {
-				reg = <0x420000 0x40000>;
-				label = "0:RPM_1";
-				read-only;
-			};
-
-			partition@460000 {
-				reg = <0x460000 0x10000>;
-				label = "0:CDT";
-				read-only;
-			};
-
-			partition@470000 {
-				reg = <0x470000 0x10000>;
-				label = "0:CDT_1";
-				read-only;
-			};
-
-			partition@480000 {
-				reg = <0x480000 0x10000>;
-				label = "0:APPSBLENV";
-			};
-
-			partition@490000 {
-				reg = <0x490000 0xa0000>;
-				label = "0:APPSBL";
-				read-only;
-			};
-
-			partition@530000 {
-				reg = <0x530000 0xa0000>;
-				label = "0:APPSBL_1";
-				read-only;
-			};
-
-			partition@610000 {
-				reg = <0x610000 0x80000>;
-				label = "0:ETHPHYFW";
-				read-only;
-			};
-
-			partition@3a0000 {
-				reg = <0x3a0000 0x10000>;
-				label = "0:DEVCFG";
-				read-only;
-			};
-
-			partition@3b0000 {
-				reg = <0x3b0000 0x10000>;
-				label = "0:DEVCFG_1";
-				read-only;
-			};
-
-			partition@3c0000 {
-				reg = <0x3c0000 0x10000>;
-				label = "0:APDP";
-				read-only;
-			};
-
-			partition@3d0000 {
-				reg = <0x3d0000 0x10000>;
-				label = "0:APDP_1";
-				read-only;
-			};
-
-			partition@3e0000 {
-				reg = <0x3e0000 0x40000>;
-				label = "0:RPM";
-				read-only;
-			};
-
-			partition@5d0000 {
-				reg = <0x5d0000 0x40000>;
-				label = "0:ART";
-				read-only;
-			};
-
 			partition@0 {
-				reg = <0x00 0x50000>;
-				label = "0:SBL1";
+				label = "0:sbl1";
+				reg = <0x0 0x50000>;
 				read-only;
 			};
 
 			partition@50000 {
+				label = "0:mibib";
 				reg = <0x50000 0x10000>;
-				label = "0:MIBIB";
 				read-only;
 			};
 
 			partition@60000 {
+				label = "0:bootconfig";
 				reg = <0x60000 0x20000>;
-				label = "0:BOOTCONFIG";
 				read-only;
 			};
 
 			partition@80000 {
+				label = "0:bootconfig1";
 				reg = <0x80000 0x20000>;
-				label = "0:BOOTCONFIG1";
 				read-only;
 			};
 
 			partition@a0000 {
+				label = "0:qsee";
 				reg = <0xa0000 0x180000>;
-				label = "0:QSEE";
+				read-only;
+			};
+
+			partition@220000 {
+				label = "0:qsee_1";
+				reg = <0x220000 0x180000>;
+				read-only;
+			};
+
+			partition@3a0000 {
+				label = "0:devcfg";
+				reg = <0x3a0000 0x10000>;
+				read-only;
+			};
+
+			partition@3b0000 {
+				label = "0:devcfg_1";
+				reg = <0x3b0000 0x10000>;
+				read-only;
+			};
+
+			partition@3c0000 {
+				label = "0:apdp";
+				reg = <0x3c0000 0x10000>;
+				read-only;
+			};
+
+			partition@3d0000 {
+				label = "0:apdp_1";
+				reg = <0x3d0000 0x10000>;
+				read-only;
+			};
+
+			partition@3e0000 {
+				label = "0:rpm";
+				reg = <0x3e0000 0x40000>;
+				read-only;
+			};
+
+			partition@420000 {
+				label = "0:rpm_1";
+				reg = <0x420000 0x40000>;
+				read-only;
+			};
+
+			partition@460000 {
+				label = "0:cdt";
+				reg = <0x460000 0x10000>;
+				read-only;
+			};
+
+			partition@470000 {
+				label = "0:cdt_1";
+				reg = <0x470000 0x10000>;
+				read-only;
+			};
+
+			partition@480000 {
+				label = "0:appsblenv";
+				reg = <0x480000 0x10000>;
+			};
+
+			partition@490000 {
+				label = "0:appsbl";
+				reg = <0x490000 0xa0000>;
+				read-only;
+			};
+
+			partition@530000 {
+				label = "0:appsbl_1";
+				reg = <0x530000 0xa0000>;
+				read-only;
+			};
+
+			partition@5d0000 {
+				label = "0:art";
+				reg = <0x5d0000 0x40000>;
+				read-only;
+			};
+
+			partition@610000 {
+				label = "0:ethphyfw";
+				reg = <0x610000 0x80000>;
 				read-only;
 			};
 		};
@@ -301,7 +301,7 @@
 
 	nand@0 {
 		reg = <0>;
-		nand-ecc-strength = <4>;
+		nand-ecc-strength = <8>;
 		nand-ecc-step-size = <512>;
 		nand-bus-width = <8>;
 
@@ -310,40 +310,30 @@
 	                #address-cells = <1>;
 	                #size-cells = <1>;
 	
-			partition@7c00000 {
-				reg = <0x7c00000 0x7400000>;
-				label = "rootfs";
-			};
-
-			partition@0 {
-				reg = <0x00 0x7400000>;
-				label = "rootfs_1";
-				read-only;
-			};
-
-			partition@f000000 {
-				reg = <0xf000000 0x800000>;
-				label = "0:WIFIFW";
-				read-only;
-			};
-
-			partition@f800000 {
-				reg = <0xf800000 0x80000>;
-				label = "0:TEST";
-				read-only;
-			};
-
-			partition@f880000 {
-				reg = <0xf880000 0x80000>;
-				label = "0:RESET";
-				read-only;
-			};
-
-			partition@7400000 {
-				reg = <0x7400000 0x800000>;
-				label = "0:WIFIFW_1";
-				read-only;
-			};
+	                partition@0 {
+	                    label = "rootfs_1";
+	                    reg = <0x00000000 0x07400000>;
+	                };
+	                partition@7400000 {
+	                    label = "0:WIFIFW_1";
+	                    reg = <0x07400000 0x00800000>;
+	                };
+	                partition@7c00000 {
+	                    label = "rootfs";
+	                    reg = <0x07c00000 0x07400000>;
+	                };
+	                partition@f000000 {
+	                    label = "0:WIFIFW";
+	                    reg = <0x0f000000 0x00800000>;
+	                };
+	                partition@f800000 {
+	                    label = "0:TEST";
+	                    reg = <0x0f800000 0x00080000>;
+	                };
+	                partition@f880000 {
+	                    label = "0:RESET";
+	                    reg = <0x0f880000 0x00080000>;
+	                };
 		};
 	};
 };
