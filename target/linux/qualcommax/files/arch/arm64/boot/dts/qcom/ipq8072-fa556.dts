@@ -242,7 +242,7 @@
 			};
 
 			partition@3d0000 {
-					reg = <0x3d0000 0x10000>;
+				reg = <0x3d0000 0x10000>;
 				label = "0:APDP_1";
 				read-only;
 			};
@@ -312,7 +312,7 @@
 	
 			partition@7c00000 {
 				reg = <0x7c00000 0x7400000>;
-					label = "rootfs";
+				label = "rootfs";
 			};
 
 			partition@0 {
