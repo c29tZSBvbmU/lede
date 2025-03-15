@@ -341,7 +341,7 @@
 
 			partition@7400000 {
 				reg = <0x7400000 0x800000>;
-					label = "0:WIFIFW_1";
+				label = "0:WIFIFW_1";
 				read-only;
 			};
 		};
