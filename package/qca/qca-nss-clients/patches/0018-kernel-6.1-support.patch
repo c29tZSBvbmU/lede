@@ -300,8 +300,8 @@
  #else
  	struct nss_tun6rd_stats stats;
 
---- a/ipsecmgr/nss_ipsecmgr_tunnel.c
-+++ b/ipsecmgr/nss_ipsecmgr_tunnel.c
+--- a/ipsecmgr/v2.0/nss_ipsecmgr_tunnel.c
++++ b/ipsecmgr/v2.0/nss_ipsecmgr_tunnel.c
 @@ -445,7 +445,7 @@
  	/*
  	 * Get the MAC address from the ethernet device
