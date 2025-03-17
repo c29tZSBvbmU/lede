@@ -273,17 +273,12 @@
  	memcpy(dev->perm_addr, dev->dev_addr, dev->addr_len);
 --- a/map/map-t/Makefile
 +++ b/map/map-t/Makefile
-@@ -1,7 +1,11 @@
+@@ -1,4 +1,5 @@
  # Makefile for map-t client
--ccflags-y += -I$(obj)/../../exports -I$(obj)/../..  -I$(obj)/nss_hal/include
 +NAT46_DIR := $(shell find $(TOPDIR)/build_dir/target-aarch64_cortex-a53_musl -type d -name "nat46-*" 2>/dev/null | head -n 1)/nat46/modules
-+
-+ccflags-y += -I$(obj)/../../exports -I$(obj)/../.. -I$(obj)/nss_hal/include
-+ccflags-y += -I$(NAT46_DIR)
+ ccflags-y += -I$(obj)/../../exports -I$(obj)/../..  -I$(obj)/nss_hal/include
  ccflags-y += -DNSS_MAP_T_DEBUG_LEVEL=0
  ccflags-y += -Wall -Werror
- obj-m += qca-nss-map-t.o
- qca-nss-map-t-objs := nss_connmgr_map_t.o
 --- a/netlink/nss_nlgre_redir_cmn.c
 +++ b/netlink/nss_nlgre_redir_cmn.c
 @@ -384,7 +384,7 @@ static int nss_nlgre_redir_cmn_set_mac_a
