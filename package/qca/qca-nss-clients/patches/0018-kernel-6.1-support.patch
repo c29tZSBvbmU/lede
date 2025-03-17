@@ -299,3 +299,15 @@
  	u64_stats_update_end(&stats.syncp);
  #else
  	struct nss_tun6rd_stats stats;
+
+--- a/ipsecmgr/nss_ipsecmgr_tunnel.c
++++ b/ipsecmgr/nss_ipsecmgr_tunnel.c
+@@ -445,7 +445,7 @@
+ 	/*
+ 	 * Get the MAC address from the ethernet device
+ 	 */
+-	random_ether_addr(dev->dev_addr);
++	eth_random_addr(dev->dev_addr);
+ 
+ 	memset(dev->broadcast, 0xff, dev->addr_len);
+ 	memcpy(dev->perm_addr, dev->dev_addr, dev->addr_len);
