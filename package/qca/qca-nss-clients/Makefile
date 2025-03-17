@@ -588,8 +588,6 @@ define Build/Compile
 	  modules
 endef
 
-NAT46_DIR := $(shell find $(STAGING_DIR)/pkg/nat46 -type d -name "nat46-*" | head -n 1)/nat46/modules
-EXTRA_CFLAGS += -I$(NAT46_DIR)
 
 $(eval $(call KernelPackage,qca-nss-drv-gre))
 $(eval $(call KernelPackage,qca-nss-drv-l2tpv2))
