@@ -319,7 +319,7 @@
 	                    reg = <0x07400000 0x00800000>;
 	                };
 	                partition@7c00000 {
-	                    label = "ubi";
+	                    label = "rootfs";
 	                    reg = <0x07c00000 0x07400000>;
 	                };
 	                partition@f000000 {
