@@ -81,12 +81,6 @@ ifneq ($(CONFIG_DRIVER_11AX_SUPPORT),)
 endif
 
 ifneq ($(CONFIG_DRIVER_11BE_SUPPORT),)
-<<<<<<< HEAD
-   HOSTAPD_IEEE80211BE:=y
- endif
-
-CORE_DEPENDS = +ucode +libubus +libucode +ucode-mod-fs +ucode-mod-nl80211 +ucode-mod-rtnl +ucode-mod-ubus +ucode-mod-uloop +libblobmsg-json
-=======
   HOSTAPD_IEEE80211BE:=y
 endif
 
@@ -94,7 +88,6 @@ endif
 CORE_DEPENDS = +ucode +libucode \
 	+ucode-mod-fs +ucode-mod-nl80211 +ucode-mod-rtnl +ucode-mod-ubus +ucode-mod-uloop \
 	+libubus +libblobmsg-json
->>>>>>> origin/backup
 
 DRIVER_MAKEOPTS= \
 	CONFIG_ACS=y CONFIG_DRIVER_NL80211=y \
@@ -534,11 +527,7 @@ define Package/eapol-test/Default
   SECTION:=net
   SUBMENU:=WirelessAPD
   CATEGORY:=Network
-<<<<<<< HEAD
-  DEPENDS:=$(DRV_DEPENDS) +libubus +libblobmsg-json
-=======
   DEPENDS:=$(DRV_DEPENDS) $(CORE_DEPENDS)
->>>>>>> origin/backup
 endef
 
 define Package/eapol-test
@@ -603,11 +592,6 @@ TARGET_CPPFLAGS := \
 	-D_GNU_SOURCE \
 	$(if $(CONFIG_WPA_MSG_MIN_PRIORITY),-DCONFIG_MSG_MIN_PRIORITY=$(CONFIG_WPA_MSG_MIN_PRIORITY))
 
-<<<<<<< HEAD
-TARGET_LDFLAGS += -lubox -lubus -lblobmsg_json
-
-=======
->>>>>>> origin/backup
 TARGET_LDFLAGS += -lubox -lubus -lblobmsg_json -lucode -lm -lnl-tiny
 
 ifdef CONFIG_WPA_ENABLE_WEP
