@@ -190,8 +190,4 @@ $(eval $(call BuildPackage,ucode))
 $(foreach mod,$(UCODE_MODULES), \
 	$(eval $(call BuildPackage,$(mod))))
 
-<<<<<<< HEAD
 $(eval $(call HostBuild))
-=======
-$(eval $(call HostBuild))
->>>>>>> origin/backup
