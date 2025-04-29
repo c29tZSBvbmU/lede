@@ -81,17 +81,15 @@
 		compatible = "gpio-leds";
 
 		wlan2g {
-		    label = "green:wlan2g";
-		    gpios = <&tlmm 42 GPIO_ACTIVE_LOW>;
-		    linux,default-trigger = "netdev";
-		    trigger-sources = <&wlan1>;
+			label = "green:wlan2g";
+			gpios = <&tlmm 42 GPIO_ACTIVE_LOW>;
+			linux,default-trigger = "phy1radio";
 		};
-
+		
 		wlan5g {
-		    label = "green:wlan5g";
-		    gpios = <&tlmm 43 GPIO_ACTIVE_LOW>;
-		    linux,default-trigger = "netdev";
-		    trigger-sources = <&wlan0>;
+			label = "green:wlan5g";
+			gpios = <&tlmm 43 GPIO_ACTIVE_LOW>;
+			linux,default-trigger = "phy0radio";
 		};
 
 		led_nr_g {
