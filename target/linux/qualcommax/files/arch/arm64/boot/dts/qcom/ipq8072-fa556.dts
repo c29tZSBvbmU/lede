@@ -86,13 +86,14 @@
 		    linux,default-trigger = "netdev";
 		    trigger-sources = <&wlan1>;
 		};
-		
+
 		wlan5g {
 		    label = "green:wlan5g";
 		    gpios = <&tlmm 43 GPIO_ACTIVE_LOW>;
 		    linux,default-trigger = "netdev";
 		    trigger-sources = <&wlan0>;
 		};
+
 		led_nr_g {
 			label = "green:nr";
 			gpios = <&tlmm 0 GPIO_ACTIVE_LOW>;
